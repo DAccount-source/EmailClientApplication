@@ -10,6 +10,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class HomeScreen extends AppCompatActivity implements DrawerItemRecyclerViewAdapter.ClickListener {
@@ -19,6 +21,7 @@ public class HomeScreen extends AppCompatActivity implements DrawerItemRecyclerV
     private RecyclerView mDrawerRecyclerView;
     Toolbar toolbar;
     android.support.v7.app.ActionBarDrawerToggle mDrawerToggle;
+    ImageButton composeBtn;
 
 
     @Override
@@ -31,6 +34,7 @@ public class HomeScreen extends AppCompatActivity implements DrawerItemRecyclerV
         mDrawerRecyclerView = (RecyclerView) findViewById(R.id.left_drawer);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         mDrawerRecyclerView.setLayoutManager(linearLayoutManager);
+        composeBtn=(ImageButton)findViewById(R.id.composeBtn);
 
         toolbar = findViewById(R.id.toolbar);
 

@@ -58,7 +58,7 @@
 
 
     <EditText
-        android:id="@+id/SignUpInputEmail"
+        android:id="@+id/loginEmailId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -71,10 +71,10 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="text|textPersonName"
-        android:padding="16dp"
-       ></EditText>
+        android:padding="16dp"></EditText>
+
     <EditText
-        android:id="@+id/SignUpInputPassword"
+        android:id="@+id/loginPwd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="7dp"
@@ -86,32 +86,34 @@
         android:drawableStart="@drawable/ic_lock"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPersonName"
-        android:padding="16dp"/>
+        android:inputType="textPassword"
+        android:padding="16dp" />
 
     <Button
-        android:id="@+id/SignupbtnLogin"
+        android:id="@+id/loginBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/round_btn"
         android:padding="16dp"
-        android:layout_marginTop="10dp"
         android:text="LOGIN"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/forgotPwd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="40dp"
-        android:textColor="@color/colorPrimary"
         android:gravity="right"
-        android:text="Forgot Password?" />
+        android:text="Forgot Password?"
+        android:textColor="@color/colorPrimary" />
+
+
 
 </LinearLayout>
