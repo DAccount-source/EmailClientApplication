@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Email Client Application</string>
+    <string-array name="navigation_drawer_items_array">
+        <item>Inbox</item>
+        <item>Sent</item>
+        <item>Drafts</item>
+        <item>Outbox</item>
+    </string-array>
+</resources>
