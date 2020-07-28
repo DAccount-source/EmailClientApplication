@@ -1,24 +1,41 @@
 package com.akanksha.emailclientapplication;
 
 public class ItemData {
-    String UserName;
-    String Subject;
+
+    private String userName;
+    private String subject;
+    private String dateTime;
+    private String bodyData;
+
     public String getUserName() {
-        return UserName;
+        return userName;
     }
 
     public void setUserName(String userName) {
-        UserName = userName;
+        this.userName = userName;
     }
 
     public String getSubject() {
-        return Subject;
+        return subject;
     }
 
     public void setSubject(String subject) {
-        Subject = subject;
+        this.subject = subject;
     }
 
+    public String getDateTime() {
+        return dateTime;
+    }
 
+    public void setDateTime(String dateTime) {
+        this.dateTime = dateTime;
+    }
 
+    public String getBodyData() {
+        return bodyData;
+    }
+
+    public void setBodyData(String bodyData) {
+        this.bodyData = bodyData;
+    }
 }

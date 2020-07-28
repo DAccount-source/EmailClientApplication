@@ -6,11 +6,11 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="Subject"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:id="@+id/subBodyID"
+        android:id="@+id/email_subject"
         android:inputType="textEmailSubject"
         />
 
@@ -20,7 +20,8 @@
             android:layout_height="wrap_content"
             android:text="From : "
             android:inputType="textEmailAddress"
-            android:id="@+id/emailBodyID"
+            android:id="@+id/emailFrom"
+            android:layout_margin="10dp"
             android:textSize="24sp"/>
 
         <TextView
@@ -28,7 +29,9 @@
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:text="Body"
-            android:id="@+id/BodyID"
+            android:layout_margin="10dp"
+            android:id="@+id/body"
+            android:scrollbars="vertical"
             android:textSize="24sp"/>
 
 

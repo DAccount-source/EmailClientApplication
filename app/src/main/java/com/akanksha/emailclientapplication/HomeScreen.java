@@ -22,6 +22,14 @@ public class HomeScreen extends AppCompatActivity implements DrawerItemRecyclerV
     Toolbar toolbar;
     android.support.v7.app.ActionBarDrawerToggle mDrawerToggle;
     ImageButton composeBtn;
+    public static final String EMAIL_ID = "EMAIL_ID";
+    public static final String PASSWORD = "PASSWORD";
+    public static final String SUBJECT = "SUBJECT";
+    public static final String FROM_ADDRESS = "FROM_ADDRESS";
+    public static final String BODY = "BODY";
+
+
+    private String emailId, pass;
 
 
     @Override
@@ -38,6 +46,10 @@ public class HomeScreen extends AppCompatActivity implements DrawerItemRecyclerV
 
         toolbar = findViewById(R.id.toolbar);
 
+        if(getIntent() != null){
+            emailId = getIntent().getStringExtra(EMAIL_ID);
+            pass = getIntent().getStringExtra(PASSWORD);
+        }
 
         DrawerItemRecyclerViewAdapter adapter = new DrawerItemRecyclerViewAdapter(mNavigationDrawerItemTitles, this);
         mDrawerRecyclerView.setAdapter(adapter);
@@ -47,6 +59,8 @@ public class HomeScreen extends AppCompatActivity implements DrawerItemRecyclerV
         setupDrawerToggle();
 
         setTitle(getString(R.string.app_name));
+
+        selectItem(0);
 
     }
 
@@ -65,13 +79,13 @@ public class HomeScreen extends AppCompatActivity implements DrawerItemRecyclerV
 
         switch (position) {
             case 0:
-//                fragment = new ConnectFragment();
+                fragment = new InboxFragment();
                 break;
             case 1:
-//                fragment = new FixturesFragment();
+//                fragment = new SendBoxFragment();
                 break;
             case 2:
-//                fragment = new TableFragment();
+//                fragment = new InboxFragment();
                 break;
 
             default:

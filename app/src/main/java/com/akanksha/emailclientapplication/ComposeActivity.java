@@ -3,7 +3,7 @@ package com.akanksha.emailclientapplication;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ComposeActicity extends AppCompatActivity {
+public class ComposeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

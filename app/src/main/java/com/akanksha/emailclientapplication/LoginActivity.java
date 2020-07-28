@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import static com.akanksha.emailclientapplication.HomeScreen.EMAIL_ID;
+import static com.akanksha.emailclientapplication.HomeScreen.PASSWORD;
+
 public class LoginActivity extends AppCompatActivity {
 
     EditText loginEmailID,loginPwd;
@@ -21,7 +24,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         loginEmailID=findViewById(R.id.loginEmailId);
         loginPwd=findViewById(R.id.loginPwd);
-
         btnLogin=findViewById(R.id.loginBtn);
 
 
@@ -32,12 +34,14 @@ public class LoginActivity extends AppCompatActivity {
 
                 String inputEmailId=loginEmailID.getText().toString();
                 String inputPwd=loginPwd.getText().toString();
-                if(inputEmailId.equals(emailid) && pwd.equals(inputPwd)){
+//                if(inputEmailId.equals(emailid) && pwd.equals(inputPwd)){
                     Intent i=new Intent(LoginActivity.this,HomeScreen.class);
+                    i.putExtra(EMAIL_ID, inputEmailId);
+                    i.putExtra(PASSWORD, inputPwd);
                     startActivity(i);
-                }else{
-                    Toast.makeText(LoginActivity.this, "Incorrect Email or Password", Toast.LENGTH_SHORT).show();
-                }
+//                }else{
+//                    Toast.makeText(LoginActivity.this, "Incorrect Email or Password", Toast.LENGTH_SHORT).show();
+//                }
             }
         });
 
