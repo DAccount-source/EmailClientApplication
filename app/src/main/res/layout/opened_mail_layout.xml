@@ -29,7 +29,7 @@
             android:inputType="textMultiLine"
             android:text="Body"
             android:id="@+id/BodyID"
-            android:textSize="24sp"8/>
+            android:textSize="24sp"/>
 
 
 
